@@ -32,7 +32,7 @@ export default function Home() {
             <div className="flex flex-wrap gap-5 mt-10">
 
               <Link
-                href="/upload"
+                href="/upload-resume"
                 className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-xl font-bold transition duration-300 hover:scale-105"
               >
                 📄 Upload Resume
