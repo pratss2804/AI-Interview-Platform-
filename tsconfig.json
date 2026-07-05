@@ -22,8 +22,6 @@
 
     "baseUrl": ".",
 
-    "ignoreDeprecations": "6.0",
-
     "paths": {
       "@/*": ["./*"]
     },
@@ -42,7 +40,7 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "app/(main)/interview"  ],
+  ],
 
   "exclude": ["node_modules"]
 }
