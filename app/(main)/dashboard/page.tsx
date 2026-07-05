@@ -628,15 +628,14 @@ export default async function DashboardPage() {
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
 
         <Link
-          href="/upload"
-          className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl p-6 text-center shadow-lg hover:scale-105 transition"
-        >
-          <div className="text-4xl">📄</div>
-
-          <h3 className="font-bold mt-3">
-            Upload Resume
-          </h3>
-        </Link>
+  href="/upload-resume"
+  className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl p-6 hover:scale-105 transition text-center shadow-lg"
+>
+  <div className="text-4xl">📄</div>
+  <h3 className="font-bold mt-3">
+    Upload Resume
+  </h3>
+</Link>
 
         <div className="bg-gradient-to-br from-green-600 to-green-800 rounded-xl p-6 text-center shadow-lg">
 

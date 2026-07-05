@@ -128,7 +128,7 @@ export default function Home() {
         </p>
 
         <Link
-          href="/upload"
+          href="/upload-resume"
           className="inline-block mt-10 bg-green-600 hover:bg-green-700 px-10 py-4 rounded-xl font-bold text-xl transition duration-300 hover:scale-105"
         >
           🚀 Start Now
