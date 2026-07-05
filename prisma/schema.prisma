@@ -1,0 +1,81 @@
+// This is your Prisma schema file
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       String @id @default(cuid())
+  name     String
+  email    String @unique
+  password String
+  role     String @default("USER")
+
+  resumes Resume[]
+
+  createdAt DateTime @default(now())
+}
+
+model Resume {
+  id String @id @default(cuid())
+
+  title String
+  fileUrl String
+
+  score Int?
+  feedback String?
+
+  userId String
+  user User @relation(fields:[userId], references:[id])
+
+  questions InterviewQuestion[]
+
+  interviews Interview[]
+
+  createdAt DateTime @default(now())
+}
+
+model Interview {
+  id String @id @default(cuid())
+
+  resumeId String?
+  resume Resume? @relation(fields: [resumeId], references: [id])
+
+  totalScore Int?
+  finalFeedback String?
+
+  createdAt DateTime @default(now())
+}
+
+model InterviewQuestion {
+  id String @id @default(cuid())
+
+  question String
+
+  resumeId String
+  resume Resume @relation(fields: [resumeId], references: [id])
+
+  createdAt DateTime @default(now())
+
+  answers InterviewAnswer[]
+}
+
+model InterviewAnswer {
+  id String @id @default(cuid())
+
+  answer String
+
+  aiFeedback String?
+
+  score Int?
+
+  createdAt DateTime @default(now())
+
+  questionId String
+  question   InterviewQuestion @relation(fields: [questionId], references: [id])
+}
