@@ -79,7 +79,7 @@ export default async function DashboardPage() {
 
         <div className="mt-5 md:mt-0">
           <Link
-            href="/upload"
+            href="/upload-resume"
             className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-xl font-semibold transition"
           >
             Upload Resume
